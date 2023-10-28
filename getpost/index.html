@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #FFD3B6, #FFAAA5);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #FFD3B6;
+            background-color: #D5B8C6;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Center align the form contents */
+        }
+        label {
+            color: black;
+            display: block; /* Display labels as blocks for vertical alignment */
+            text-align: left; /* Align labels to the left */
+        }
+        input[type="text"],
+        input[type="number"],
+        select {
+        width: calc(100% - 22px); /* Adjusted width to account for padding */
+        padding: 10px 10px; /* Added padding on left and right */
+        margin: 5px 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        }
+
+        input[type="submit"] {
+            background-color: #7F6A93;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #558F91;
+        }
+    </style>
+</head>
+<body>
+    <form action="process_form.php" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+        <option value="female">Female</option>
+        <option value="male">Male</option></select><br>
+
+
+        <label for="religion">Religion:</label>
+        <input type="text" name="religion"><br>
+
+        <label for="school">School:</label>
+        <input type="text" name="school"><br>
+
+        <label for="course">Course:</label>
+        <input type="text" name="course"><br>
+
+        <label for="hobbies">Hobbies:</label>
+        <input type="text" name="hobbies"><br>
+
+        <label for="skills">Skills:</label>
+        <input type="text" name="skills"><br>
+
+        <label for="dream_job">Dream Job:</label>
+        <input type="text" name="dream_job"><br>
+
+        <label for="motto">Motto in Life:</label>
+        <input type="text" name="motto"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
